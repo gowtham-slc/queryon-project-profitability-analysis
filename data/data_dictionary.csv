@@ -1,0 +1,10 @@
+file,column,description
+projects.csv,project_id,Project identifier (inconsistent formats; duplicates exist)
+projects.csv,budget_amount,"Budget as text (currency symbols, commas, 'k')"
+projects.csv,last_updated_at,Use to select latest record when duplicates exist
+time_entries.csv,time_entry_id,Unique id but duplicated rows exist; use last_updated_at to dedupe
+time_entries.csv,hours,Hours may be numeric or text; can be negative; may exceed 24
+time_entries.csv,billable_flag,"Mixed boolean encodings: Y/N, true/false, 1/0"
+invoices.csv,status,Sent/Paid/Voided; Voided should be excluded from revenue
+invoices.csv,invoice_amount,Currency as text; may be negative (credit memo)
+
